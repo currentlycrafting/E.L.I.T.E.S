@@ -18,13 +18,13 @@
 
 ## Screenshots
 
-![Home View](screenshots/home.png)  
+![Home View](<img width="291" height="586" alt="Home" src="https://github.com/user-attachments/assets/291c9abf-514c-463a-9594-396795215494" />)  
 *Add players, set rounds, start tournaments.*
 
-![Tournament View](screenshots/tournament.png)  
+![Tournament View](<img width="318" height="589" alt="Winner" src="https://github.com/user-attachments/assets/3981915a-ad84-4b08-9540-f434af83e3d0" />)  
 *Track matches, select winners, and see Elo updates.*
 
-![Leaderboard View](screenshots/leaderboard.png)  
+![Leaderboard View](<img width="292" height="577" alt="Leaderboard" src="https://github.com/user-attachments/assets/b44d8670-1ee6-4c00-8b80-07bbb6031d68" />)  
 *View rankings dynamically as matches conclude.*
 
 ---
