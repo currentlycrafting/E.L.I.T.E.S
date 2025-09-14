@@ -15,7 +15,7 @@ struct AppTheme {
     static let textSecondary = Color(white: 0.75)
     static let textInput = Color.white
     static let buttonText = Color.white
-    static let highlight = Color(red: 1.0, green: 0.84, blue: 0.0) // professional gold
+    static let highlight = Color(red: 0.0, green: 0.7, blue: 0.3)
 }
 
 // MARK: - Neumorphic Components
@@ -509,7 +509,7 @@ struct TournamentView: View {
                                             .foregroundColor(AppTheme.textSecondary)
                                     }
                                     Spacer()
-                                    Text("VS")
+                                    Text("")
                                         .font(.headline.bold())
                                         .foregroundColor(AppTheme.highlight)
                                         .frame(minWidth: 48)
@@ -536,15 +536,25 @@ struct TournamentView: View {
                                     }
                                 } else {
                                     HStack(spacing: 16) {
-                                        NeumorphicChoiceButton(title: "P1 Wins") {
+                                        let maxButtonWidth: CGFloat = 140 // max width for super long names
+                                        NeumorphicChoiceButton(title: match.player1.name.uppercased().prefix(12).description) {
                                             handleWin(match: match, winnerIndex: 1)
                                         }
-                                        NeumorphicChoiceButton(title: "P2 Wins") {
+                                        .frame(maxWidth: maxButtonWidth)
+
+                                        Text("VS")
+                                            .font(.headline.weight(.bold))
+                                            .foregroundColor(Color.white) // custom gold color
+                                            .frame(width: 48, alignment: .center)
+
+                                        NeumorphicChoiceButton(title: match.player2.name.uppercased().prefix(12).description) {
                                             handleWin(match: match, winnerIndex: 2)
                                         }
+                                        .frame(maxWidth: maxButtonWidth)
                                     }
                                     .frame(maxWidth: .infinity)
                                 }
+
                             }
                             .padding()
                             .background(AppTheme.card)
